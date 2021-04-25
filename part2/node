@@ -1,0 +1,12 @@
+package com.company;
+
+class node<T> {
+
+    T data;
+    node nxt;
+
+    public node(T data) {
+        this.data = data;
+        nxt = null;
+    }
+}
