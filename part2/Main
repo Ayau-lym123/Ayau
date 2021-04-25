@@ -1,0 +1,35 @@
+package com.company;
+
+public class Main2 {
+
+    public static void main(String[] args) {
+        MyLinkedList linkedlist = new MyLinkedList();
+
+        linkedlist.add(0,1);
+
+        linkedlist.add(0,2);
+
+        linkedlist.add(0,3);
+        linkedlist.add(0,4);
+
+        linkedlist.add(0,5);
+
+        linkedlist.DisplayAll();
+
+        System.out.println();
+
+        linkedlist.reverse();
+
+        linkedlist.DisplayAll();
+        System.out.println();
+        System.out.println("Searching for 3.. " +  linkedlist.find(3));
+
+        System.out.println("Deleting 3.. ");
+        linkedlist.remove(linkedlist.find(3));
+
+        System.out.println("Resultin linked list: ");
+        linkedlist.DisplayAll();
+
+
+    }
+}
