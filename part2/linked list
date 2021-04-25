@@ -1,0 +1,98 @@
+package com.company;
+
+class MyLinkedList<T> {
+    node head;
+
+    MyLinkedList(){
+        head = null;
+    }
+
+    public void add(int ind, T value){
+        if(ind == 0){
+            node temp = head;
+            head = new node(value);
+            head.nxt = temp;
+
+        } else {
+            int curInd = 0;
+            node cur = head;
+
+            while(cur != null){
+                if(curInd == ind - 1){
+                    node copy = cur.nxt;
+                    cur.nxt = new node(value);
+                    cur.nxt.nxt = copy;
+                }
+                curInd++;
+                cur = cur.nxt;
+            }
+        }
+    }
+    public int find(T keyItem){
+        // store current index
+        int curInd = 0;
+        // store current node
+        node cur = head;
+
+        // while not reached the end
+        while(cur != null){
+            if(cur.data == keyItem){
+                // found
+                return curInd;
+            }
+            // move to the next
+            curInd++;
+            cur = cur.nxt;
+        }
+        // not found
+        return -1;
+    }
+    public void reverse(){
+        node pre = null;
+        node cur = head;
+        // while not reached the end
+        while(cur != null){
+            // change next to previous
+
+
+            node next = cur.nxt;
+            cur.nxt = pre;
+            pre = cur;
+            cur = next;
+        }
+        // change head to the last element in reversed linked list
+        head = pre;
+    }
+
+    public node remove(int ind){
+        if(ind == 0){
+            node temp = head;
+            head = head.nxt;
+            return temp;
+        } else {
+            int curind = 0;
+            node cur = head;
+            while(curind != (ind - 1)){
+                cur = cur.nxt;
+                curind++;
+            }
+            node temp = cur.nxt;
+            cur.nxt = cur.nxt.nxt;
+            return temp;
+        }
+    }
+
+
+    //  method to display all elements in linked list
+    public void DisplayAll(){
+        node cur = head;
+
+        // while not reached the end
+        while(cur != null){
+            System.out.print(cur.data + " ");
+            // move to the next
+            cur = cur.nxt;
+        }
+    }
+
+}
