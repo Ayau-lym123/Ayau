@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+/* Node for Binary Tree */
+ class BTNode
+{
+    BTNode left, right;
+    int data;
+
+    /* Constructor */
+    public BTNode(int x)
+    {
+        data = x;
+        left = null;
+        right = null;
+    }
+}
