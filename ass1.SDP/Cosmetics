@@ -1,0 +1,55 @@
+package com.company.ass1;
+
+import com.company.ass1.Species;
+import com.company.ass1.Application;
+
+public abstract class Cosmetics {
+     private Species species;
+     private Application application;
+     private Texture texture;
+
+
+     public Cosmetics(Species species, Application application, Texture texture){
+         this.species = species;
+         this.application = application;
+         this.texture = texture;
+     }
+
+     public void includeSpecies(){
+          this.species.speciess();
+     }
+
+     public void includeApplication(){
+          this.application.applicationn();
+     }
+
+     public void includeTexture(){
+          this.texture.texturee();
+     }
+
+     abstract void display();
+
+     public Species getSpecies() {
+          return species;
+     }
+
+     public void setSpecies(Species species) {
+          this.species = species;
+     }
+
+     public Application getApplication() {
+          return application;
+     }
+
+     public void setApplication(Application application) {
+          this.application = application;
+     }
+
+     public Texture getTexture() {
+          return texture;
+     }
+
+     public void setTexture(Texture texture) {
+          this.texture = texture;
+     }
+}
