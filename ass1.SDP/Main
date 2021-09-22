@@ -1,0 +1,18 @@
+package com.company.ass1;
+
+
+public class Main {
+
+    public static void main(String[] args){
+
+        Cosmetics cosmetics = new Eyeshadows();
+
+        cosmetics.display();
+        cosmetics.includeSpecies();
+        cosmetics.includeApplication();
+        cosmetics.includeTexture();
+
+    }
+
+
+}
